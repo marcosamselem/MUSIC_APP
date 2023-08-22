@@ -1,0 +1,43 @@
+
+.bg-image {
+  background-image: url("logo-1.png");
+  background-size: cover;
+  background-position: center;
+  color: white; /* Ajusta el color del texto según tu imagen */
+  position: relative;
+}
+
+.bg-image {
+  background-image: url("sp.png");
+  background-size: cover;
+  background-position: center;
+  color: white; /* Ajusta el color del texto según tu imagen */
+  padding: 10px 0; /* Espacio de relleno para el contenido */
+}
+
+/* Agrega tus estilos personalizados aquí */
+.music-genre {
+  font-size: 4rem; /* Ajusta el tamaño de fuente según tu preferencia */
+  font-weight: bold;
+
+}
+
+
+/* Agrega tus estilos personalizados aquí */
+.btn-p {
+  background-color: #745039 ; /* Color azul de Bootstrap */
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; /* Transición para hover */
+  text-decoration: none; /* Quita el subrayado de enlace */
+}
+
+.btn-p:hover {
+  background-color: #f6c077 ; /* Cambio de color en hover */
+  text-decoration: none; /* Quita el subrayado de enlace */
+}
+
+
