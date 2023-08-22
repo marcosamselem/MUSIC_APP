@@ -1,5 +1,4 @@
 class InstrumentsController < ApplicationController
-
   def index
     @instruments = Instrument.all
   end
@@ -14,12 +13,22 @@ class InstrumentsController < ApplicationController
 
   def create
     @instrument = Instrument.new(instrument_params)
-    @instrument.user_id = current_user.id
+    @instrument.user = current_user
     if @instrument.save
       redirect_to instruments_path
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def edit
+    @instrument = Instrument.find(params[:id])
+  end
+
+  def update
+    @instrument = Instrument.find(params[:id])
+    @instrument.update(instrument_params)
+    redirect_to instrument_path(@instrument)
   end
 
   def destroy
@@ -31,6 +40,6 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:name, :price, :location, :user_id, :image_url)
+    params.require(:instrument).permit(:name, :price, :location, :brand, :image_url)
   end
 end
