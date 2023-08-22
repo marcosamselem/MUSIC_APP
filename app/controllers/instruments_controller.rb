@@ -1,6 +1,11 @@
 class InstrumentsController < ApplicationController
+
   def index
     @instruments = Instrument.all
+  end
+
+  def show
+    @instrument = Instrument.find(params[:id])
   end
 
   def new
@@ -16,6 +21,13 @@ class InstrumentsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
+  # def destroy
+  #   @instrument = Restaurant.find(params[:id])
+  #   @instrument.destroy
+  #   redirect_to instruments_path, status: :see_other
+  # end
+
 
   private
 
