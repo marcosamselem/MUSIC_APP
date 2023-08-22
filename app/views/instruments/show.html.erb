@@ -4,3 +4,7 @@
 <img src="https://kitt.lewagon.com/placeholder/users/krokrob">
 <%= @instrument.price%>
 <%= @instrument.location %>
+
+<%= link_to "Delete",
+  instrument_path(@instrument),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
