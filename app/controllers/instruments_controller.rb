@@ -1,6 +1,6 @@
 class InstrumentsController < ApplicationController
   def index
-    @istruments = Instrument.all
+    @instruments = Instrument.all
   end
 
   def show
