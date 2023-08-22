@@ -1,16 +1,17 @@
 class InstrumentsController < ApplicationController
   def index
     @instruments = Instrument.all
-  end 
-  
+  end
+
   def new
     @instrument = Instrument.new
   end
 
   def create
     @instrument = Instrument.new(instrument_params)
+    @instrument.user_id = current_user.id
     if @instrument.save
-      redirect_to instrument_path(@instrument)
+      redirect_to instruments_path(@instrument)
     else
       render :new, status: :unprocessable_entity
     end
@@ -19,6 +20,6 @@ class InstrumentsController < ApplicationController
   private
 
   def instrument_params
-    params.require(:instrument).permit(:name, :price, :location)
+    params.require(:instrument).permit(:name, :price, :location, :user_id)
   end
 end
