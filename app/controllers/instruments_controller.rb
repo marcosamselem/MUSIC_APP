@@ -22,12 +22,11 @@ class InstrumentsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @instrument = Restaurant.find(params[:id])
-  #   @instrument.destroy
-  #   redirect_to instruments_path, status: :see_other
-  # end
-
+  def destroy
+    @instrument = Instrument.find(params[:id])
+    @instrument.destroy
+    redirect_to instruments_path, status: :see_other
+  end
 
   private
 
