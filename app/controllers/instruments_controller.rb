@@ -11,7 +11,7 @@ class InstrumentsController < ApplicationController
     @instrument = Instrument.new(instrument_params)
     @instrument.user_id = current_user.id
     if @instrument.save
-      redirect_to instruments_path(@instrument)
+      redirect_to instruments_path
     else
       render :new, status: :unprocessable_entity
     end
