@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+puts "cleaning db"
+Instrument.destroy_all
+User.destroy_all
+
+puts "seeding db"
+
+user = User.create(email: "marcos@gmail.com", password: "123456")
+Instrument.create(name: "guitar", price: 30, location: "7-8 Charlotte Rd, London EC2A 3DH", brand: "Fender Stratocaster", user_id: user.id)
+Instrument.create(name: "piano", price: 42, location: "275 Old St, London EC1V 9LN", brand: "YAMAHA", user_id: user.id)
+Instrument.create(name: "drums", price: 31, location: "6 Dereham Pl, London EC2A 3HJ", brand: "Roland", user_id: user.id)
+Instrument.create(name: "trumpet", price: 37, location: "19 Virginia Rd, London E2 7NF", brand: "Fender Stratocaster", user_id: user.id)
+Instrument.create(name: "violin", price: 35, location: "Spear Bethnal Green St Peters Church, St Peter's Cl, London E2 7AE", brand: "Fender Stratocaster", user_id: user.id)
