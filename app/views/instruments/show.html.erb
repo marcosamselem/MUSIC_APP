@@ -25,5 +25,7 @@
     <%= link_to "Delete",
       instrument_path(@instrument),
       data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-
 </div>
+
+      <%= cl_image_tag @instrument.photo.key,
+        height: 300, width: 400, crop: :fill %>
