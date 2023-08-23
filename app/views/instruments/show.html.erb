@@ -1,10 +1,29 @@
-<h1><%= @instrument.name%><h1>
-<%= @instrument.brand %>
- <img src=<%=@instrument.image_url %>>
-<img src="https://kitt.lewagon.com/placeholder/users/krokrob">
-<%= @instrument.price%>
-<%= @instrument.location %>
+<div class="container">
+  <div class="row">
+    <div class="user col-3">
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" id="user-image">
+    </div>
 
-<%= link_to "Delete",
-  instrument_path(@instrument),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+    <div class="flex-col col-6 text-center align-items-center">
+      <h2><%= @instrument.name%></h2>
+      <h4><%= @instrument.brand %></h4>
+    </div>
+
+  </div>
+
+    <div class="image">
+      <img src=<%=@instrument.image_url %>>
+    </div>
+
+
+    <div class="price location">
+    <%= @instrument.price%>
+    <%= @instrument.location %>
+    </div>
+
+
+    <%= link_to "Delete",
+      instrument_path(@instrument),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+
+</div>
