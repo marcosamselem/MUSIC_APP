@@ -1,6 +1,16 @@
-<h1><%= @instrument.name%><h1>
-<%= @instrument.brand %>
- <img src=<%=@instrument.image_url %>>
-<img src="https://kitt.lewagon.com/placeholder/users/krokrob">
-<%= @instrument.price%>
-<%= @instrument.location %>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h1><%= @instrument.name %></h1>
+      <p class="instrument-info"><%= @instrument.brand %></p>
+      <div class="d-flex justify-content-center">
+        <img src="<%= @instrument.image_url %>" class="img-fluid pr-3" style="max-height: 200px;" >
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="img-fluid ml-2" style="max-height: 200px;">
+      </div>
+      <p class="instrument-info "><%= @instrument.price %></p>
+      <p class="instrument-info"><%= @instrument.location %></p>
+
+   <%= link_to "Booking",  new_instrument_path, class: "btn btn-secondary mb-3" %>
+    </div>
+  </div>
+</div>
