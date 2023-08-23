@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :instruments, only: [:index, :show, :new, :create, :destroy, :edit, :update] do
     resources :bookings, only: [:create, :new]
   end
-  resources :bookings, only: [] do
+  resources :bookings, only: [:index, :create, :destroy] do
     member do
       get :confirmation
     end

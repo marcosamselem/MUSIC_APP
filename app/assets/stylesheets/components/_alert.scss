@@ -4,3 +4,22 @@
   right: 16px;
   z-index: 1000;
 }
+
+
+.btn-delete {
+  background-color: red;
+  color: white;
+  border-color: red;
+ margin-left: 5rem;
+ margin-right: 5rem;
+ margin-bottom: 0.5rem;
+ border-radius: 20px;
+  border: 1px solid rgb(118, 7, 7); /* Corrección del valor del border */
+ padding: 0.25rem 0.5rem; /* Agrega padding si lo deseas */
+ text-decoration: none; /* Evita subrayado en el enlace */
+}
+
+.btn-delete:hover {
+  background-color: darkred;
+  border-color: darkred;
+}
