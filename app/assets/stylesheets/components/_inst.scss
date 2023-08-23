@@ -1,0 +1,111 @@
+.card-img-top {
+  object-fit: cover;
+  height: 200px; /* Ajusta la altura según tus preferencias */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+}
+
+
+.bn-pueba {
+  color: black;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  text-decoration: none;
+
+}
+
+.bn-p:hover {
+  background-color: #f6c077;
+  text-decoration: none;
+}
+
+
+.btn-prueba {
+  font-size: 1.55rem;
+  color: black;
+}
+
+
+/* heard */
+.container {
+  padding-top: 20px;
+}
+
+.heart-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  color: red;
+}
+
+.card {
+  position: relative;
+}
+
+.card-img-top {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.card-title {
+  margin-top: 10px;
+}
+
+.card-text {
+  margin-bottom: 0;
+}
+
+
+
+.fas {
+  color:gold;
+}
+
+
+
+/*  Brand */
+.brand-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+/*  Location */
+.location-text {
+  font-size: 1.2rem;
+  color:black;
+  font-weight: bold;
+}
+
+.container-i{
+  margin: 20px; /* Margen exterior */
+  padding: 10px; /* Relleno interior */
+}
+
+
+
+.rounded-i{
+  border-radius: 0 0 20px 20px;
+}
+
+.card-text-i {
+  display: block;
+  margin-bottom: 0.5rem; /* Espaciado inferior predeterminado */
+  font-size: 0.875rem; /* Tamaño de fuente predeterminado */
+  color: #6c757d; /* Color de texto predeterminado */
+}
+
+.brand-text {
+  margin: 0;
+  padding: 0;
+  /* Agrega aquí cualquier otro estilo específico que desees */
+}
+
+
+.link{
+  list-style: none;
+  text-decoration: none ;
+}

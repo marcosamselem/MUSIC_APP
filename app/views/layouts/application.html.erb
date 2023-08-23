@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
      <script src="https://kit.fontawesome.com/c2e8a021f2.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
@@ -17,3 +17,15 @@
        <%= render "shared/footer" %>
   </body>
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const heartIcons = document.querySelectorAll(".heart-icon");
+    heartIcons.forEach((icon) => {
+      icon.addEventListener("click", function () {
+        icon.querySelector("i").classList.toggle("fas");
+        icon.querySelector("i").classList.toggle("far");
+        icon.querySelector("i").classList.toggle("text-danger");
+      });
+    });
+  });
+</script>
