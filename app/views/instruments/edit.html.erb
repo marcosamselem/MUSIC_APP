@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Create a new instrument</h1>
+      <h1>Edit instrument</h1>
       <%= simple_form_for(@instrument) do |f| %>
         <%= f.input :name %>
         <%= f.input :brand %>
         <%= f.input :price %>
         <%= f.input :location %>
-       <%= f.input :image_url  %>
-        <%= f.submit class: 'btn btn-p' %>
+        <%= f.input :image_url %>
+        <%= f.submit class: 'btn btn-primary' %>
       <% end %>
     </div>
   </div>

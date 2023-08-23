@@ -1,5 +1,4 @@
 class InstrumentsController < ApplicationController
-
   def index
     @instruments = Instrument.all
   end
@@ -14,7 +13,7 @@ class InstrumentsController < ApplicationController
 
   def create
     @instrument = Instrument.new(instrument_params)
-    @instrument.user_id = current_user.id
+    @instrument.user = current_user
     if @instrument.save
       redirect_to instruments_path
     else
@@ -22,16 +21,25 @@ class InstrumentsController < ApplicationController
     end
   end
 
-  # def destroy
-  #   @instrument = Restaurant.find(params[:id])
-  #   @instrument.destroy
-  #   redirect_to instruments_path, status: :see_other
-  # end
+  def edit
+    @instrument = Instrument.find(params[:id])
+  end
 
+  def update
+    @instrument = Instrument.find(params[:id])
+    @instrument.update(instrument_params)
+    redirect_to instrument_path(@instrument)
+  end
+
+  def destroy
+    @instrument = Instrument.find(params[:id])
+    @instrument.destroy
+    redirect_to instruments_path, status: :see_other
+  end
 
   private
 
   def instrument_params
-    params.require(:instrument).permit(:name, :price, :location, :user_id, :image_url)
+    params.require(:instrument).permit(:name, :price, :location, :brand, :image_url)
   end
 end

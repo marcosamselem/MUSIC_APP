@@ -1,3 +1,4 @@
+
 <div class="container text-center">
   <div class="row">
     <div class="col-md-6 offset-md-3">
@@ -9,8 +10,11 @@
       </div>
       <p class="instrument-info "><%= @instrument.price %></p>
       <p class="instrument-info"><%= @instrument.location %></p>
+<%= link_to "Booking", new_instrument_booking_path(instrument_id: @instrument.id), class: "btn btn-secondary mb-3" %>
 
-   <%= link_to "Booking",  new_instrument_path, class: "btn btn-secondary mb-3" %>
+    <%= link_to "Delete",
+      instrument_path(@instrument),
+      data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
+
     </div>
   </div>
-</div>
