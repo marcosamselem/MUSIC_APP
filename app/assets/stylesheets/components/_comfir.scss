@@ -1,0 +1,43 @@
+.btn-c{
+
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #745039;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 33px;
+}
+
+.btn-c:hover {
+  background-color: #f6c077;
+}
+
+
+.container-c {
+  text-align: center;
+}
+
+.animate-heading {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(-50%) scale(0.1);
+  animation: revealHeading 1.5s forwards ease-in-out;
+}
+
+@keyframes revealHeading {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+

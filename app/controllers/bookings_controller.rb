@@ -1,5 +1,11 @@
 class BookingsController < ApplicationController
+
+  def index
+     @bookings = current_user.bookings
+  end
+
   def new
+
     @booking = Booking.new
     @instrument = Instrument.find(params[:instrument_id])
   end
@@ -18,6 +24,16 @@ class BookingsController < ApplicationController
 
   def confirmation
     @booking = Booking.find(params[:id])
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    if @booking.destroy
+      flash[:success] = "Booking successfully deleted."
+    else
+      flash[:error] = "An error occurred while deleting the booking."
+    end
+    redirect_to bookings_path
   end
 
   private

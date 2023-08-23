@@ -1,5 +1,10 @@
- <%= simple_form_for([@instrument, @booking]) do |f| %>
-        <%= f.input :start, html5: true %>
-        <%= f.input :end, html5: true%>
-        <%= f.submit class: 'btn btn-primary' %>
-      <% end %>
+
+<div class="container-c  text-center">
+  <div class="text-center">
+    <%= simple_form_for([@instrument, @booking]) do |f| %>
+      <%= f.input :start, html5: true %>
+      <%= f.input :end, html5: true %>
+      <%= f.submit class: 'btn-c btn-primary mb-3 ' %>
+    <% end %>
+  </div>
+</div>
