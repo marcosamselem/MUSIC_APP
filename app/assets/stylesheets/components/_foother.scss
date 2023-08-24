@@ -1,8 +1,9 @@
 footer {
   position: relative;
   width: 100%;
-  background-color: #745039 ;
-  min-height: 50px;
+  height: 140px;
+  background-color: #b1b1b1;
+  min-height: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,9 +37,9 @@ footer {
   }
 
   .menu li a {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
-    margin: 0 10px;
+    margin: 10px;
     display: inline-block;
     opacity: 0.75;
     transition: 0.5s;
