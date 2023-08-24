@@ -14,8 +14,8 @@
 }
 
 .btn-p {
-  background-color: #745039;
-  color: black;
+  background-color: #5a5a5a;
+  color: whitesmoke;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -25,7 +25,7 @@
 }
 
 .btn-p:hover {
-  background-color: #f6c077;
+  background-color: #a8a8a8 ;
   text-decoration: none;
 }
 
@@ -59,4 +59,9 @@
 }
 .symphony-text {
   animation: blink 2s infinite;
+}
+
+.lead {
+  background-color: rgba(0, 0, 0, 0.20);
+  border-radius: 8px;
 }
