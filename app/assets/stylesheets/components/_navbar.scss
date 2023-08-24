@@ -1,6 +1,12 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #f6c077;
+  background: rgb(236,234,234);
+  background: radial-gradient(circle, rgba(236,234,234,1) 20%, rgba(170,168,168,1) 89%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .navbar-lewagon .navbar-collapse {
