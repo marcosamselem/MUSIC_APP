@@ -2,11 +2,10 @@
   justify-content: space-between;
   background: rgb(236,234,234);
   background: radial-gradient(circle, rgba(236,234,234,1) 20%, rgba(170,168,168,1) 89%);
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -14,5 +13,5 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 100px;
+  width: 90px;
 }
