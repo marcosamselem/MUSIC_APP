@@ -37,3 +37,9 @@ violin = Instrument.create!(name: "violin", price: 35, location: "Spear Bethnal 
 file = URI.open("https://th.bing.com/th/id/R.a3d542215bed2f55f7b570d8de169825?rik=JgKJDZHKZr4jjg&riu=http%3a%2f%2fdifferentdegrees.files.wordpress.com%2f2009%2f10%2fguitarra_electrica-92379.jpeg&ehk=ITAzn1rgFgdEfq46Hym9AgUxTBXJOcx44ad7%2fYk%2fKTk%3d&risl=&pid=ImgRaw&r=0")
 violin.photo.attach(io: file, filename: "nes.png", content_type: "image/png")
 violin.save!
+
+
+
+
+
+
