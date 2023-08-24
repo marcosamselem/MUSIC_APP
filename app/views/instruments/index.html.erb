@@ -1,8 +1,9 @@
 
+<body class="background">
 <div class="container-i d-flex">
-  <div class="my-5 row">
+  <div class="my-5 row ">
     <% @instruments.each do |instrument| %>
-      <div class="col-md-4 mb-4 btn">
+      <div class="col-md-4 mb-4 secondary btn">
         <a class="link" href="/instruments/<%= instrument.id %>">
           <div class="rounded-4 card shadow">
             <%= cl_image_tag instrument.photo.key, class: "rounded-top card-img-top" %>
@@ -41,3 +42,4 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
+</body>
