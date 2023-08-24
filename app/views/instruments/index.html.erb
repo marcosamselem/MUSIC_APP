@@ -5,7 +5,7 @@
       <div class="col-md-4 mb-4 btn">
         <a class="link" href="/instruments/<%= instrument.id %>">
           <div class="card shadow rounded-i">
-            <%# <%= image_tag instrument.image_url, class: "card-img-top" %> %>
+            <%= cl_image_tag instrument.photo.key, class: "card-img-top" %>
             <div class="heart-icon">
               <i class="far fa-heart"></i>
             </div>
