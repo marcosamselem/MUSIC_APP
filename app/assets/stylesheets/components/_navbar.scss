@@ -2,12 +2,15 @@
   justify-content: space-between;
   background: rgb(236,234,234);
   background: radial-gradient(circle, rgba(236,234,234,1) 20%, rgba(170,168,168,1) 89%);
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+<<<<<<< HEAD
   z-index: 1;
 
+=======
+>>>>>>> bc3a0dbf5d2ce3430f9cfad22d2661e6e806a07c
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -17,9 +20,13 @@
 
 .navbar-lewagon .navbar-brand img {
 <<<<<<< HEAD
+<<<<<<< HEAD
   width: 90px;
   z-index: 2;
 =======
   width: 100px;
 >>>>>>> 3b1f7248ffbb12c4bf18aabe8a271e0164408d12
+=======
+  width: 90px;
+>>>>>>> bc3a0dbf5d2ce3430f9cfad22d2661e6e806a07c
 }
