@@ -10,3 +10,14 @@
 @import "show";
 @import "comfir";
 @import "map";
+
+
+.main-div{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.middle-div{
+  flex-grow: 1;
+}
