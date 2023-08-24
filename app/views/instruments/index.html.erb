@@ -4,13 +4,8 @@
     <% @instruments.each do |instrument| %>
       <div class="col-md-4 mb-4 btn">
         <a class="link" href="/instruments/<%= instrument.id %>">
-<<<<<<< HEAD
-          <div class="card shadow rounded-i">
-            <%= image_tag instrument.image_url, class: "card-img-top" %>
-=======
           <div class="rounded-4 card shadow">
             <%= cl_image_tag instrument.photo.key, class: "rounded-top card-img-top" %>
->>>>>>> 3b1f7248ffbb12c4bf18aabe8a271e0164408d12
             <div class="heart-icon">
               <i class="far fa-heart"></i>
             </div>
@@ -23,12 +18,7 @@
               <div class="d-inline"><%= instrument.location %></div>
             </div>
 
-          <%= link_to instrument_path(instrument),
-            method: :delete,
-            data: { turbo_method: :delete, turbo_confirm: 'Are you sure you want to delete this instrument?' },
-            class: 'btn btn-danger' do %>
-                 <i class="fa-regular fa-trash-can"></i> Delete
-              <% end %>
+       
 
             <div class="card-footer justify-content-between">
               <div class="d-flex justify-content-between align-items-center">
