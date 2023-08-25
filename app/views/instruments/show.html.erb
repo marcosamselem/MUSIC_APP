@@ -1,22 +1,44 @@
 
-<div class="container text-center">
-  <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <h1><%= @instrument.name %></h1>
-      <p class="instrument-info"><%= @instrument.brand %></p>
-      <div class="d-flex justify-content-center">
-        <img src="<%= @instrument.image_url %>" class="img-fluid pr-3" style="max-height: 200px;" >
-        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="img-fluid ml-2" style="max-height: 200px;">
-      </div>
-      <p class="instrument-info "><%= @instrument.price %></p>
-      <p class="instrument-info"><%= @instrument.location %></p>
-      <%= link_to "Booking", new_instrument_booking_path(instrument_id: @instrument.id), class: "btn btn-secondary mb-3" %>
 
-      <%= link_to "Delete",
-        instrument_path(@instrument),
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}%>
-     </div>
-      <%= cl_image_tag @instrument.photo.key,
-        height: 300, width: 400, crop: :fill %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card" style="width: 100%;">
+        <img src="<%= @instrument.image_url %>" class="img-fluid img-ins" style="max-height: 400px; border-bottom: 2px solid black;" alt="Instrument Image">
+        <div class="card-body">
+        <div class="d-flex justify-content-between mb-4">
+          <p class="card-text mb-4 p-show"  >Location: <%= @instrument.location %></p>
+          <p class="card-text mb-4 p-show">Price: <%= @instrument.price %> Per Day</p>
+        </div>
+          <div class="text-center">
+            <%= link_to "Booking", new_instrument_booking_path(instrument_id: @instrument.id), class: "btn btn-secondary btn-lg" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-4 i">
+        <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-img-top img-fluid img-show" alt="User Image" style="max-width: 120px; ">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title text-center p-show">Fahim </h5>
+          <h5 class="card-title text-center">Passionate musician offering my well-maintained instrument for rent. </h5>
+
+        </div>
+      </div>
+    </div>
+    <div class="row g-0">
+      <p class="card-text  text-center" >"Experience the joy of playing on a quality piece that's perfect for both beginners and seasoned players. Flexible rental terms and affordable rates. Elevate your music journey with this instrument that resonates with soulful melodies. Inquire now for a harmonious experience!"</p>
+      <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
     </div>
   </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
