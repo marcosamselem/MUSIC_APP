@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
@@ -94,4 +94,9 @@
 
 .round{
   border-radius: 25px
+}
+
+.card{
+  min-height: 430px;
+  max-height: 430px;
 }
