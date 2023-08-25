@@ -1,10 +1,19 @@
-
-<div class="container-c  text-center py-4">
-  <div class="text-center">
-    <%= simple_form_for([@instrument, @booking]) do |f| %>
-      <%= f.input :start, html5: true %>
-      <%= f.input :end, html5: true %>
-      <%= f.submit class: 'btn-c btn-primary mb-3 ' %>
-    <% end %>
-  </div>
+<div class="container">
+  <div class="font-t">
+    <div class="text-center">
+      <h1 class="font-t">You are booking <%=@instrument.name%></h1>
+    </div>
+    <h3 class="font-t">Pick-up address is <%=@instrument.location%></h3>
+    <div class="container-c  text-center py-4">
+      <div class="text-center">
+        <%= simple_form_for([@instrument, @booking]) do |f| %>
+        <div class="d-flex justify-content-evenly">
+          <%= f.input :start, html5: true %>
+          <%= f.input :end, html5: true %>
+        </div>
+        <%= f.submit class: 'btn-c btn-primary mb-3 ' %>
+        <% end %>
+      </div>
+    </div>
+  <div>
 </div>
