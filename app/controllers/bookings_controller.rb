@@ -1,11 +1,9 @@
 class BookingsController < ApplicationController
-
   def index
-     @bookings = current_user.bookings
+    @bookings = current_user.bookings
   end
 
   def new
-
     @booking = Booking.new
     @instrument = Instrument.find(params[:instrument_id])
   end
@@ -15,7 +13,7 @@ class BookingsController < ApplicationController
     @instrument = Instrument.find(params[:instrument_id])
     @booking.instrument_id = @instrument.id
     @booking.user_id = current_user.id
-  if @booking.save
+    if @booking.save
       redirect_to confirmation_booking_path(@booking)
     else
       render :new, status: :unprocessable_entity
@@ -24,6 +22,9 @@ class BookingsController < ApplicationController
 
   def confirmation
     @booking = Booking.find(params[:id])
+    @instrument = Instrument.find(@booking.instrument_id)
+    days = (@booking.end - @booking.start).to_i
+    @total_price = days * @instrument.price
   end
 
   def destroy
