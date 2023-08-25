@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
@@ -79,3 +79,24 @@
   width: 40px;
 }
 
+
+.shadow {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.card {
+  background-color: #FFFFFF;
+}
+
+.btn-prueba{
+  font-family: "Gill Sans Extrabold", sans-serif;
+}
+
+.round{
+  border-radius: 25px
+}
+
+.card{
+  min-height: 430px;
+  max-height: 430px;
+}
