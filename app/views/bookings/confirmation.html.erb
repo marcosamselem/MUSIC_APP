@@ -1,9 +1,14 @@
-
 <div class="container-c  container text-center">
   <h1 class="animate-heading" style="color: green;">Confirmed!</h1>
-  from: <%= @booking.start %> to: <%= @booking.end %>
-  <%= @instrument.name %><%= @instrument.brand %>
-  <%= @total_price %>
+  <br>
+  <div>From: <%= @booking.start %>
+  </div>
+  <div>To: <%= @booking.end %>
+  </div>
+  <div><%= @instrument.name %> <%= @instrument.brand %>
+  </div>
+  <div>£<%= @total_price %> Per Day
+  </div>
 </div>
 <div class="container text-center">
 <%= link_to "Share For More Items", instruments_path, method: :get, class: "btn-c" %>
