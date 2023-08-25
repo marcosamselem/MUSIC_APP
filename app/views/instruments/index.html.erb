@@ -1,40 +1,41 @@
 
 <body class="background">
-<div class="container-i d-flex">
-  <div class="my-5 row ">
-    <% @instruments.each do |instrument| %>
-      <div class="col-md-4 mb-4 secondary btn">
-        <a class="link" href="/instruments/<%= instrument.id %>">
-          <div class="rounded-4 card shadow">
-            <%= cl_image_tag instrument.photo.key, class: "rounded-top card-img-top" %>
-            <div class="heart-icon">
-              <i class="far fa-heart"></i>
-            </div>
+  <div class="container-i d-flex">
+    <div class="my-5 row ">
+      <% @instruments.each do |instrument| %>
+        <div class="col-md-3 mb-4 secondary btn">
+          <a class="link" href="/instruments/<%= instrument.id %>">
+            <div class="rounded-4 card shadow">
+              <%if instrument.photo.attached?%>
+                <%= cl_image_tag instrument.photo.key, class: "p-3 round card-img-top" %>
+              <% else %>
+                <%= image_tag "logomap", class: "p-3 round card-img-top" %>
+              <%end%>
+              <div class="card-body rounded-top">
+                <p class="d-inline me-2 location-text">Brand:</p>
+                <p class="d-inline"><%= instrument.brand %></p>
+                <br>
+                <div class="d-inline location-text">Location:</div>
+                <div class="d-inline"><%= instrument.location %></div>
+              </div>
 
-            <div class="card-body rounded-top">
-              <p class="d-inline location-text">Brand:</p>
-              <p class="d-inline"><%= instrument.brand %></p>
-              <br>
-              <div class="d-inline location-text">Location:</div>
-              <div class="d-inline"><%= instrument.location %></div>
-            </div>
 
-       
 
-            <div class="card-footer justify-content-between">
-              <div class="d-flex justify-content-between align-items-center">
-                <h2 class="card-title font-weight-bold mb-0"><%= instrument.name %></h2>
-                <p class="btn-prueba mb-0 btn"><%= instrument.price %> £/hour</p>
+              <div class="card-footer justify-content-between">
+                <div class="d-flex justify-content-between align-items-center">
+                  <h2 class="card-title font-weight-bold mb-0"><%= instrument.name %></h2>
+                  <p class="btn-prueba mb-0 btn"><%= instrument.price %> £/day</p>
+                </div>
               </div>
             </div>
-          </div>
-        </a>
-      </div>
-    <% end %>
+          </a>
+        </div>
+      <% end %>
+    </div>
+    <div class="map-size shadow-lg p-3 mb-5 bg-body rounded sticky-md-top my-5 rounded-4 mx-3" style="width: 100%; height: 600px;"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
   </div>
-  <div class="sticky-md-top my-5 rounded-4 mx-3" style="width: 100%; height: 600px; position: sticky !important; position: relative; z-index: -1"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-</div>
 </body>
