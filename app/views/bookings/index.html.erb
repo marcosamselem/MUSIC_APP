@@ -8,7 +8,6 @@
   <div class="row">
     <% @bookings.each do |booking| %>
       <div class="col-md-4 mb-4 btn">
-        <a class="link" href="/bookings/<%= booking.id %>">
           <div class="card shadow rounded-i">
             <%= image_tag booking.instrument.image_url, class: "card-img-top" %>
 

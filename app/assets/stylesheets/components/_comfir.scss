@@ -2,8 +2,8 @@
 
   display: inline-block;
   padding: 10px 20px;
-  background-color: #745039;
-  color: black;
+  background-color: #6F6F6F;
+  color: white;
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -11,10 +11,12 @@
   font-size: 16px;
   cursor: pointer;
   margin-bottom: 33px;
+  font-weight: 100;
 }
 
 .btn-c:hover {
-  background-color: #f6c077;
+  background-color: white;
+  color: black;
 }
 
 
@@ -39,5 +41,3 @@
     transform: translateX(0) scale(1);
   }
 }
-
-
