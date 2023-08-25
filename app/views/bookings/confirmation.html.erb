@@ -1,10 +1,17 @@
-
-<div class="container-c  container text-center">
+<div class="container-c container mt-5 d-flex justify-content-center">
+<div class="my-container border">
   <h1 class="animate-heading" style="color: green;">Confirmed!</h1>
-  from: <%= @booking.start %> to: <%= @booking.end %>
-  <%= @instrument.name %><%= @instrument.brand %>
-  <%= @total_price %>
+  <br>
+  <h4>From: <%= @booking.start %>
+  </h4>
+  <h4>To: <%= @booking.end %>
+  </h4>
+  <h4><%= @instrument.name %> <%= @instrument.brand %>
+  </h4>
+  <h4>£<%= @total_price %> Per Day
+  </h4>
 </div>
-<div class="container text-center">
-<%= link_to "Share For More Items", instruments_path, method: :get, class: "btn-c" %>
+</div>
+<div class="container text-center mt-3">
+<%= link_to "Search For More Items", instruments_path, method: :get, class: "btn-c" %>
 </div>

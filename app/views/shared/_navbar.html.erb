@@ -12,11 +12,12 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-         <li class="nav-item active nav-link-inline">
-  <%= link_to "Home", instruments_path, class: "dropdown-item" %>
-</li>
 <li class="nav-item nav-link-inline">
-  <%= link_to "List your instrument", new_instrument_path, class: "dropdown-item" %>
+  <%= link_to "My bookings", bookings_path, class: "dropdown-item" %>
+</li>
+
+<li class="nav-item nav-link-inline">
+  <%= link_to "List instruments", new_instrument_path, class: "dropdown-item" %>
 </li>
           <li class="nav-item">
             <%= link_to "", "#", class: "nav-link" %>
@@ -27,7 +28,7 @@
 </a>
 
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                 <%= link_to "Instrument",    instruments_path, class: "dropdown-item" %>
+                 <%= link_to "Instrument", instruments_path, class: "dropdown-item" %>
 
 
               <%# <%= link_to "Rent", "#",destroy_user_session_path class: "dropdown-item" %>
