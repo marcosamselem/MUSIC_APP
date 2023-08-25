@@ -17,6 +17,48 @@
   width: 90px;
 }
 
+.dropdown-item {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px; /* Ajusta el valor según el grosor de la línea */
+  cursor: pointer;
+}
+
+.dropdown-item::before,
+.dropdown-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Ajusta el grosor de la línea */
+  background-color: #ccc; /* Cambia este color según tus preferencias */
+  transition: width 0.3s ease-in-out;
+}
+
+/* Anima la aparición de la línea desde el centro hacia los lados */
+.dropdown-item:hover::before,
+.dropdown-item:hover::after {
+  width: 50%; /* Cambia el valor para controlar la longitud de la línea */
+}
+
+/* Coloca una línea en cada lado */
+.dropdown-item::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dropdown-item::after {
+  right: 50%;
+  transform: translateX(50%);
+}
+
+
+.nav-link-inline {
+  padding-top: 0.8rem;
+  align-items: center;
+  display: inline-block;
+  margin-right: 10px; /* Ajusta el margen entre los enlaces si es necesario */
 .nav-link{
   color: #FFFFFF
 }
+
