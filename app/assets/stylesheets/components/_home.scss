@@ -11,16 +11,15 @@
 .home-logo {
   img {
     width: 400px;
-    margin: 20px auto;
+    margin: 10px auto;
   }
 }
+
 .music-genre {
   font-size: 4rem;
   font-weight: bold;
 
 }
-
-
 
 .btn-p {
   background-color: #5a5a5a;
@@ -31,7 +30,6 @@
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;/* Transición for the hover */
   text-decoration: none;
-
 }
 
 .btn-p:hover {
@@ -52,9 +50,6 @@
   }
 }
 
-
-
-
 .icon-rotate {
   animation: rotate 3s infinite linear;
 }
@@ -67,11 +62,19 @@
     transform: rotate(360deg);
   }
 }
+
 .symphony-text {
   animation: blink 2s infinite;
 }
 
+// .p {
+//   font-family: 'Courier New', Courier, monospace;
+//   font-style: bold;
+// }
+
 .lead {
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
   background-color: rgba(0, 0, 0, 0.20);
   border-radius: 8px;
 }
